@@ -5,10 +5,10 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_blossom.mk
+    $(LOCAL_DIR)/lineage_angelica.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_blossom-user \
-    lineage_blossom-userdebug \
-    lineage_blossom-eng
+    lineage_angelica-user \
+    lineage_angelica-userdebug \
+    lineage_angelica-eng
 

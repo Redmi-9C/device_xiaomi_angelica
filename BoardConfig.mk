@@ -6,13 +6,10 @@
 
 BOARD_VENDOR := xiaomi
 
-DEVICE_PATH := device/xiaomi/blossom
+DEVICE_PATH := device/xiaomi/angelica
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
-
-# OTA
-TARGET_OTA_ASSERT_DEVICE := dandelion,angelica,angelican,cattail,angelicain,blossom
 
 # Build
 BUILD_BROKEN_DUP_RULES := true
@@ -38,7 +35,7 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6765
-TARGET_BOOTLOADER_BOARD_NAME := blossom
+TARGET_BOOTLOADER_BOARD_NAME := angelica
 
 BOARD_HAS_MTK_HARDWARE := true
 BOARD_HAVE_MTK_FM := true
@@ -48,11 +45,11 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_xiaomi_blossom
-TARGET_RECOVERY_DEVICE_MODULES := libinit_xiaomi_blossom
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_xiaomi_angelica
+TARGET_RECOVERY_DEVICE_MODULES := libinit_xiaomi_angelica
 
 # Kernel
-TARGET_KERNEL_CONFIG := blossom_defconfig # no file, only make build system happy
+TARGET_KERNEL_CONFIG := angelica_defconfig # no file, only make build system happy
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel # automatically copied
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)-kernel/dtb.img # for mkbootimg only
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img # automatically copied
@@ -110,16 +107,6 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-
-# Reserve space for gapps install
-ifneq ($(WITH_GMS),true)
-BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT := -1
-BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 614400000
-BOARD_SYSTEMIMAGE_EXTFS_INODE_COUNT := -1
-BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 1752350720
-BOARD_SYSTEM_EXTIMAGE_EXTFS_INODE_COUNT := -1
-BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE := 92160000
-endif
 
 # Dynamic Partitions
 BOARD_ROOT_EXTRA_FOLDERS += metadata
@@ -186,4 +173,4 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # Inherit the proprietary files
-include vendor/xiaomi/blossom/BoardConfigVendor.mk
+include vendor/xiaomi/angelica/BoardConfigVendor.mk

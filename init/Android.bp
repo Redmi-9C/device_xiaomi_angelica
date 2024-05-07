@@ -15,7 +15,7 @@
 //
 
 cc_library_static {
-    name: "libinit_xiaomi_blossom_library",
+    name: "libinit_xiaomi_angelica_library",
     srcs: [
         "utils.cpp",
         "variants.cpp",
@@ -26,9 +26,9 @@ cc_library_static {
 }
 
 cc_library_static {
-    name: "libinit_xiaomi_blossom",
+    name: "libinit_xiaomi_angelica",
     srcs: ["init.cpp"],
-    whole_static_libs: ["libinit_xiaomi_blossom_library"],
+    whole_static_libs: ["libinit_xiaomi_angelica_library"],
     include_dirs: ["system/core/init"],
     recovery_available: true
 }

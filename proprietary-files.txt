@@ -51,9 +51,6 @@ vendor/firmware/soc3_0_ram_mcu_e1_hdr.bin
 vendor/firmware/WIFI_RAM_CODE_soc1_0_1_1.bin
 vendor/firmware/soc1_0_ram_wifi_1_1_hdr.bin
 
-# Firmware - NFC
-vendor/firmware/sec_s3nrn82_firmware.bin
-
 # Firmware - Misc
 vendor/firmware/Conf_MultipleTest_aa.ini
 vendor/firmware/Conf_MultipleTest_ab.ini
@@ -428,18 +425,6 @@ vendor/lib64/libbluetooth_relayer.so
 vendor/lib64/libbluetoothem_mtk.so
 vendor/lib64/libbt-vendor.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
-
-# NFC
-vendor/bin/hw/android.hardware.nfc@1.2-service.sec
-vendor/etc/init/android.hardware.nfc@1.2-service.sec.rc
-vendor/etc/init/init.nfc.sec.rc
-vendor/etc/sec_s3nrn82_rfreg.bin
-vendor/lib/nfc_nci_sec.so
-
-# NFC - Configs
-vendor/etc/nfc/nfc_whitelist.properties
-vendor/etc/libnfc-nci.conf
-vendor/etc/libnfc-sec-vendor.conf
 
 # WLAN
 vendor/bin/hw/hostapd

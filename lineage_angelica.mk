@@ -15,16 +15,15 @@ $(call inherit-product, device/xiaomi/angelica/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_angelica
 PRODUCT_DEVICE := angelica
-PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_NAME := lineage_angelica
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := M2006C3MG
+PRODUCT_MANUFACTURER := Xiaomi
+
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=angelica \
     PRIVATE_BUILD_DESC="angelica_global-user 11 RP1A.200720.011 V12.5.4.0.RCRMIXM release-keys"
 
 BUILD_FINGERPRINT := Redmi/angelica_global/angelica:11/RP1A.200720.011/V12.5.4.0.RCRMIXM:user/release-keys
-
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi

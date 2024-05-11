@@ -1248,5 +1248,9 @@ service vendor.focaltech.fps_hal /vendor/bin/hw/vendor.focaltech.fingerprint@1.0
     user system
     group system
 
+# initialize powerHAL when boot is completed
+on property:sys.boot_completed=1
+    setprop vendor.mediatek.powerhal.init 1
+
 on property:ro.hardware.fp.restartimes=max
     stop vendor.fps_hal
